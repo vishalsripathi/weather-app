@@ -1,6 +1,6 @@
 # Weather APP
 
-Weather App is built using Angular FrameWork and openWeatherMap API it helps with retrieving weather by city name.
+This Weather App is built using Angular FrameWork and openWeatherMap API. It helps in retrieving weather by city name.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
