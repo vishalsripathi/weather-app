@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 Angular Cli
-IDE
+
 
 ### Installation
 Install Angular using npm install -g @angular/cli
