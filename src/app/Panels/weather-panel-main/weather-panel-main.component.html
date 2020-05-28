@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="col-md-6 offset-md-3">
+    <div id="WeatherPanel" (click)="panelClicked()">
+      <div *ngIf="panelClick">
+        <div *ngIf="!locationFetched">
+          <div class="card text-white mb-3" id="WeatherPanel">
+            <div class="card-header">
+              <input
+                type="text"
+                class="form-control"
+                #userInput
+                placeholder="Enter City Name"
+              />
+            </div>
+            <div class="card-body" *ngIf="errorOccured">
+              <div class="alert alert-warning">
+                <strong>City Not Found</strong>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button
+                class="input-group-text btn btn-outline-primary btn-block"
+                (click)="getCity(userInput.value)"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="locationFetched">
+          <div id="WeatherPanelDay">
+            <div [ngSwitch]="climate">
+              <div class="weatherPanelRow" *ngSwitchCase="'sunny'">
+                <i class="fas fa-3x fa-sun sun"></i>
+              </div>
+              <div class="weatherPanelRow" *ngSwitchCase="'night'">
+                <i class="fas fa-3x fa-moon moon"></i>
+              </div>
+              <div class="weatherPanelRow cloudDiv" *ngSwitchCase="'cloud'">
+                <i class="fas fa-cloud fa-3x cloud"></i>
+              </div>
+              <div class="weatherPanelRow cloudDiv" *ngSwitchCase="'rain'">
+                <i class="fas fa-cloud-rain fa-3x cloud"></i>
+              </div>
+              <div class="weatherPanelRow cloudDiv" *ngSwitchCase="'snow'">
+                <i class="fas fa-snowflake fa-3x cloud"></i>
+              </div>
+              <div class="weatherPanelRow cloudDiv" *ngSwitchCase="'mist'">
+                <i class="fas fa-snowflake fa-3x cloud"></i>
+              </div>
+            </div>
+
+            <div
+              class="weatherPanelRow"
+              style="font-size: 32px; margin-top: 5px;"
+            >
+              {{ WeatherData.temp_celcius }}°
+            </div>
+            <div class="weatherPanelRow" style="font-size: 12px;">
+              {{ WeatherData.temp_min }}° / {{ WeatherData.temp_max }}°
+            </div>
+            <div class="weatherPanelRow" style="font-size: 12px;">
+              Feels Like: {{ WeatherData.temp_feels_like }}°
+            </div>
+            <div
+              class="weatherPanelRow"
+              style="font-size: 25px; margin-top: 5px;"
+            >
+              {{ WeatherData.name }}
+              <span (click)="editLocation()">
+                <i class="fas fa-edit fa-sm"></i>
+              </span>
+            </div>
+            <div
+              class="weatherPanelRow"
+              style="font-size: 12px; margin-bottom: 5px;"
+            >
+              Humidity: {{ WeatherData.main.humidity }}%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

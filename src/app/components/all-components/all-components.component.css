@@ -1,0 +1,7 @@
+.panel {
+  transition: all 1s;
+}
+
+.panel:hover {
+  transform: scale(1.1);
+}
