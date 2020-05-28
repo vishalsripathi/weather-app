@@ -1,1 +1,1 @@
-# weather-app
+# weather-app for collecting weather information.
