@@ -1,27 +1,43 @@
-# AngularWeatherApp
+# Weather APP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
+Weather App is built using Angular FrameWork and it helps with retrieving weather by city name.
 
-## Development server
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
+Angular Cli
+IDE
 
-## Code scaffolding
+### Installation
+Install Angular using npm install -g @angular/cli
+```bash
+npm install -g @angular/cli
+```
+Run npm install in terminal
+```bash
+npm install
+```
+Run ng serve in terminal
+```bash
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage 
+After installation you can see four panels displaying on the screen
+- Click on any one of them and enter a valid city name.
+- If you entered a valid city name you can see the weather details.
+- The data loaded will get refreshed every 30 seconds.
 
-## Build
+<img src="images/Screenshot%20(49).png">
+<img src="images/Screenshot%20(50).png">
+<img src="images/Screenshot%20(51).png">
+<img src="images/Screenshot%20(52).png">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Built With
+Angular - The web framework used
+Restful API - openWeatherMap API
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Authors
+* **Vishal Sripathi** - [vishalsripathi](https://github.com/vishalsripathi)
