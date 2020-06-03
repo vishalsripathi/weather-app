@@ -36,8 +36,8 @@ After installation you can see four panels displaying on the screen
 
 
 ## Built With
-Angular - The web framework used
-Restful API - openWeatherMap API
+* Framework - Angular 9
+* Restful API - openWeatherMap API
 
 ## Authors
 * **Vishal Sripathi** - [vishalsripathi](https://github.com/vishalsripathi)
